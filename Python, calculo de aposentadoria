@@ -1,0 +1,19 @@
+carteira = dict()
+c = 0
+carteira['nome'] = str(input('Digite o Nome: '))
+carteira['idade'] = 2025 - int(input('Digite a data de nascimento: '))
+carteira['trabalho'] = int(input('Digite a carteira de trabalho (anos): '))
+if carteira['trabalho'] > 0:
+    carteira['contratacao'] = int(input('Digite o ano de contratação: '))
+    if carteira['trabalho'] < 15:
+        c = 15 - carteira['trabalho']
+        carteira['Aposentadoria'] = carteira['idade'] + c
+    carteira['salario'] = int(input('Digite o salario: '))
+    print('=-'*30)
+    for k, v in carteira.items():
+        print(f' - {k} tem o valor de {v}')
+else:
+    print('=-'*30)
+    for k, v in carteira.items():
+        print(f' - {k} tem o valor {v}')
+print(carteira)
